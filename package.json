@@ -1,0 +1,22 @@
+{
+  "name": "swagger-gen",
+  "version": "1.0.0",
+  "description": "Parse through test files and output into swagger.json",
+  "main": "index.js",
+  "dependencies": {
+    "node-ts": "^2.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.2",
+    "nodemon": "^1.18.5",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.6"
+  },
+  "scripts": {
+    "start": "npm run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec ts-node src/index.ts"
+  },
+  "author": "",
+  "license": "ISC"
+}
